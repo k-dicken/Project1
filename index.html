@@ -7,26 +7,18 @@
     <title>Connect Four</title>
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <style>
-    body {
-      width: 420px;
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .piece {
-      width: 40px;
-      height: 40px;
-      margin: 10px;
-    }
-
-    .piece:hover {
-      opacity: .6;
-    }
-  </style>
   <body>
+    <div id="win-screen" style="display: none;">
+      <h1 id="player-win"></h1>
+      <br>
+      <button onclick="window.reload()">
+        <p>PLAY AGAIN</p>
+      </button>
+    </div>
 
+    <svg id="gameboard"></svg>
 
+    <div id="players"></div>
     <script src="app/app.js"></script>
   </body>
 </html>
