@@ -19,6 +19,20 @@ h1, h2, h3, h4, h5, h6, p {
     margin-bottom: 16px;
 }
 
+input, div, button, label, a {
+    font-family: Verdana, sans-serif;
+}
+
+#prevent-clicks {
+    height: 100vh;
+    width: 100vw;
+
+    position: absolute;
+
+    /* background-color: #FFF; */
+    opacity: 0;
+}
+
 #win-screen {
     height: 100vh;
     width: 100vw;
@@ -30,28 +44,76 @@ h1, h2, h3, h4, h5, h6, p {
 
     position: absolute;
 
+    text-align: center;
     color: white;
-
     background-color: rgb(40, 40, 40, .6);
 
     z-index: 99;
 }
 
-#win-screen button {
+button {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    padding: 10px 40px;
-
+    font-weight: bold;
     border: none;
-    background-color: white;
+    border-radius: 10px;
+    background-color: white; 
 }
 
-#win-screen button:hover {
-    background-color: #CCC;
+button:hover {
+    background-color: #CCC; 
 }
+
+button svg {
+    height: 40px;
+    width: 40px;
+}
+
+#reset {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 40px;
+
+    z-index: 98;
+}
+
+#reset button {
+    padding: 10px 20px;
+    background-color: transparent;
+}
+
+#reset button svg {
+    fill: #fff;
+}
+
+#reset button svg:hover {
+    fill: #ccc;
+}
+
+#win-screen button {
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+
+    padding: 16px 40px;
+/* 
+    font-weight: bold;
+    border: none;
+    background-color: white; */
+}
+
+/* #win-screen button:hover {
+    background-color: #CCC;
+} */
 
 #win-screen button p {
     margin: 0;
@@ -73,6 +135,7 @@ h1, h2, h3, h4, h5, h6, p {
     width: 80px;
     height: 80px;
     margin: 10px;
+    opacity: 1;
 }
 
 .piece:hover {
@@ -80,21 +143,43 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #players {
-    height: 100px;
+    height: 140px;
     width: 100vw;
 
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 
+    text-align: center;
+
     position: absolute;
     bottom: 0;
 
     padding: 40px;
 
+    z-index: 97;
+
     background-color: #111;
 }
 
 .player-info {
+    width: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+
     font-weight: bold;
+}
+
+.player-info span {
+    text-transform: capitalize;
+    font-size: large;
+}
+
+.fade-red {
+    
 }
